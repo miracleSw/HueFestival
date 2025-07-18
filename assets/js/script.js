@@ -23,20 +23,57 @@ document.addEventListener('DOMContentLoaded', () => {
     animateScroll();
 });
 
-window.addEventListener('load', () => {
-    const carouselTrack = document.querySelector('.carousel-tracks');
+// window.addEventListener('load', () => {
+//     const carouselTrack = document.querySelector('.carousel-tracks');
+//     const totalWidth = carouselTrack.scrollWidth;
+//     let currentPosition = 0;
+//     const speed = 1;
+//     function animateScroll() {
+//         currentPosition -= speed;
+//         if (currentPosition <= -totalWidth / 2) {
+//             currentPosition = 0;
+//         }
+//         carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+//         requestAnimationFrame(animateScroll);
+//     }
+//     animateScroll();
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carouselTrack = document.querySelector('.carousel-tracks');
+
+  const images = carouselTrack.querySelectorAll('img');
+  let loaded = 0;
+
+  images.forEach((img) => {
+    if (img.complete) {
+      loaded++;
+    } else {
+      img.addEventListener('load', () => {
+        loaded++;
+        if (loaded === images.length) startAnimation();
+      });
+    }
+  });
+
+  if (loaded === images.length) startAnimation();
+
+  function startAnimation() {
     const totalWidth = carouselTrack.scrollWidth;
     let currentPosition = 0;
     const speed = 1;
+
     function animateScroll() {
-        currentPosition -= speed;
-        if (currentPosition <= -totalWidth / 2) {
-            currentPosition = 0;
-        }
-        carouselTrack.style.transform = `translateX(${currentPosition}px)`;
-        requestAnimationFrame(animateScroll);
+      currentPosition -= speed;
+      if (currentPosition <= -totalWidth / 2) {
+        currentPosition = 0;
+      }
+      carouselTrack.style.transform = `translateX(${currentPosition}px)`;
+      requestAnimationFrame(animateScroll);
     }
+
     animateScroll();
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
