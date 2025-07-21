@@ -1,5 +1,5 @@
 @media (max-width: 576px) {
-    .header-section, .food-flex, .foods, .food-grid, .box-intro {
+    .header-section, .food-flex, .foods, .food-grid, .food-info{
         width: 100% !important;
     }
     .food-flex {
@@ -25,12 +25,15 @@
         width: 100%;
     }
 
-    .food-grids:nth-child(2) {
-        
-    }
-
     .food-grid, .food-grids {
         grid-template-columns: auto;
+        gap: 20px;
     }
+
+    .intro {
+        font-size: 20px !important;
+        padding: 0px !important;
+    }
+
 }
 
