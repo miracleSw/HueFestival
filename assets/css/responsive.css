@@ -1,0 +1,25 @@
+@media (max-width: 576px) {
+    .header-section, .food-flex, .foods {
+        width: auto;
+    }
+    .food-flex {
+        flex-direction: column;
+    }
+
+    .box-food, .food-grid {
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+    }
+
+    .food-grids {
+        max-width: 400px;
+    }
+
+    .actives {
+        margin: 0;
+    }
+
+    .food-grid, .food-grids {
+        grid-template-columns: auto
+    }
+}

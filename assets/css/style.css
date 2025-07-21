@@ -423,3 +423,8 @@
 .art-small {
     width: 25%;
 }
+
+.header-section {
+    width: 880px;
+    margin: 0 auto;
+}
