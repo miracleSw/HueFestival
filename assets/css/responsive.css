@@ -6,6 +6,10 @@
         flex-direction: column;
     }
 
+    .text--decor {
+        margin-bottom: 0px !important;
+    }
+
     .box-food, .food-grid {
         width: 100%;
         margin: 20px auto 0 auto;
