@@ -11,7 +11,10 @@
         margin: 20px auto 0 auto;
     }
 
-    
+    .box-food-section {
+        width: 100%;
+        margin: 0 auto;
+    }
 
     .actives {
         margin: 0;

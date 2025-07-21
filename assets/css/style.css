@@ -62,7 +62,7 @@
 .food-flex {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .food-flex,
@@ -71,15 +71,19 @@
     margin: 0 auto;
 }
 
+.box-food-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
 .box-f {
-    width: 452px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.box-intro {
-    width: 400px;
 }
 
 .text-f {
