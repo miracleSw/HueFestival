@@ -65,14 +65,9 @@
     justify-content: space-evenly;
 }
 
-.food-flex,
-.foods {
-    width: 1400px;
-    margin: 0 auto;
-}
-
 .box-food-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;

@@ -1,43 +1,69 @@
-@media (max-width: 576px) {
-    .header-section, .food-flex, .foods, .food-grid, .food-info{
-        width: 100% !important;
+@media (max-width: 577px) {
+    .food-grid, .food-grids {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+    .intro {
+        padding: 0 !important;
+    }
+}
+
+@media (min-width: 578px) {
+    .food-grids {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .food-grids > .food-card:nth-child(3) {
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .food-grids {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .food-grids > .food-card:nth-child(3) {
+        grid-column: auto;
+        grid-row-start: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .food-info {
+        width: 100%;
     }
     .food-flex {
         flex-direction: column;
     }
+}
 
-    .text--decor {
-        margin-bottom: 0px !important;
+@media (max-width: 1024px) {
+    .header-section, .food-flex, .foods, .food-grid, .food-grids{
+        width: 100% !important;
     }
-
     .box-food, .food-grid {
         width: 100%;
         margin: 20px auto 0 auto;
     }
-
     .box-food-section {
         width: 100%;
         margin: 0 auto;
     }
 
+    .intro {
+        font-size: 24px !important;
+    }
     .actives {
         margin: 0;
         margin-top: 24px;
     }
-
-    .food-grids {
-        width: 100%;
-    }
-
-    .food-grid, .food-grids {
-        grid-template-columns: auto;
-        gap: 20px;
-    }
-
-    .intro {
-        font-size: 20px !important;
-        padding: 0px !important;
-    }
-
 }
 
+@media (min-width: 1200px) {
+    .food-flex,
+    .foods {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
