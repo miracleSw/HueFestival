@@ -1,6 +1,6 @@
 @media (max-width: 576px) {
-    .header-section, .food-flex, .foods {
-        width: 100%;
+    .header-section, .food-flex, .foods, .food-grid, .box-intro {
+        width: 100% !important;
     }
     .food-flex {
         flex-direction: column;
@@ -8,9 +8,10 @@
 
     .box-food, .food-grid {
         width: 100%;
-        max-width: 400px;
         margin: 20px auto 0 auto;
     }
+
+    
 
     .actives {
         margin: 0;
@@ -18,7 +19,7 @@
     }
 
     .food-grids {
-        max-width: 400px;
+        width: 100%;
     }
 
     .food-grids:nth-child(2) {
@@ -29,3 +30,4 @@
         grid-template-columns: auto;
     }
 }
+

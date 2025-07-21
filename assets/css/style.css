@@ -78,6 +78,10 @@
     justify-content: center;
 }
 
+.box-intro {
+    width: 400px;
+}
+
 .text-f {
     font-size: 72px;
     font-weight: bolder;
