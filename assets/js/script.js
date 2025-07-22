@@ -168,6 +168,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    if (selectElement) {
+        selectElement.addEventListener('change', function () {
+            const selectedValue = this.value;
+
+            // Cập nhật active cho artnav
+            artNavLinks.forEach(link => {
+                link.classList.toggle('active', link.dataset.container === selectedValue);
+            });
+
+            showSection(selectedValue);
+        });
+    }
 
     if (artLoadMoreBtn) {
         artLoadMoreBtn.addEventListener('click', function () {

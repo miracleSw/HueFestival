@@ -329,6 +329,7 @@
 
 .wrap-select select {
     border: none;
+    text-align: center;
     text-transform: uppercase;
     color: #fff;
     width: 100%;

@@ -36,10 +36,43 @@
     .food-flex {
         flex-direction: column;
     }
+    .intro {
+        text-align: center;
+    }
+    .flex-box {
+        height: 400px;
+    }
+    /* Responsive Nghe thuat */
+    .art-large, .art-small {
+        width: 100%;
+    }
+    .art-card {
+        padding: 0px;
+    }
+    .row.active {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 8px;
+    }
+    .row.active > .art-card:nth-child(1) {
+        grid-column: span 2 / span 2;
+    }
+    .row.active > .art-large:nth-child(2) {
+        grid-column: span 2 / span 2;
+    }
+    .wrap-select {
+        display: block !important;
+        margin-bottom: 16px;
+    }
+    .artnav {
+        display: none !important;
+    }
+    /* End */
 }
 
 @media (max-width: 1024px) {
-    .header-section, .food-flex, .foods, .food-grid, .food-grids{
+    .header-section, .food-flex, .foods, .food-grid, .food-grids, .text-wrapper {
         width: 100% !important;
     }
     .box-food, .food-grid {
@@ -62,7 +95,7 @@
 
 @media (min-width: 1200px) {
     .food-flex,
-    .foods {
+    .foods, .artmenu-wrapper {
         width: 1200px;
         margin: 0 auto;
     }
